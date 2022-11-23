@@ -1,53 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '/screens/full_body_screen.dart';
+
 class WorkoutSplit extends StatelessWidget {
   const WorkoutSplit({super.key});
   static const routeName = '/split';
-
-  Widget _buildListTile(
-    String title,
-    String subtitle,
-  ) {
-    return Container(
-      padding: const EdgeInsets.only(top: 10),
-      height: 110,
-      margin: const EdgeInsets.only(right: 8, left: 8, top: 20),
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Color.fromARGB(255, 255, 189, 115),
-            Color.fromARGB(255, 247, 162, 66),
-            Color.fromARGB(255, 234, 135, 22),
-          ],
-        ),
-        borderRadius: BorderRadius.all(
-          Radius.circular(10),
-        ),
-      ),
-      child: ListTile(
-        enabled: true,
-        onTap: () {},
-        title: Text(
-          title,
-          style: const TextStyle(
-            fontStyle: FontStyle.italic,
-            fontSize: 18,
-            fontWeight: FontWeight.bold,
-          ),
-        ),
-        subtitle: Text(subtitle),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0xFFFFBD73),
-        title: const Text(
+        title: Text(
           'WORKOUT SPLITS',
-          style: TextStyle(color: Colors.black),
+          style: Theme.of(context).textTheme.headline3,
         ),
       ),
       body: SingleChildScrollView(
@@ -81,14 +46,12 @@ class WorkoutSplit extends StatelessWidget {
               ),
               child: ListTile(
                 enabled: true,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed(FullBody.routeName);
+                },
                 title: Text(
                   'FULL BODY WORKOUT',
-                  style: const TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
                 subtitle: Text(
                   'Best known for muscles growth and strenght reagradless your training experince. Tap to learn more...',
@@ -116,11 +79,7 @@ class WorkoutSplit extends StatelessWidget {
                 onTap: () {},
                 title: Text(
                   'PUSH PULL LEGS',
-                  style: const TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
                 subtitle: Text(
                   'One of the most effective workout splits, in Which Major muscle groups are split into three different workouts. Tap to learn more...',
@@ -148,11 +107,7 @@ class WorkoutSplit extends StatelessWidget {
                 onTap: () {},
                 title: Text(
                   'BRO-SPLIT',
-                  style: const TextStyle(
-                    fontStyle: FontStyle.italic,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
                 subtitle: Text(
                   'This workout routine is very simple in that it involves training each muscle group once per week with high volume. Tap to learn more...',
