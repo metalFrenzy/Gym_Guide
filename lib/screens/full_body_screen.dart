@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../services/hyperlink_service.dart';
+import '../widgets/app_drawer.dart';
 
 class FullBody extends StatelessWidget {
   static const routeName = '/full';
@@ -14,6 +15,7 @@ class FullBody extends StatelessWidget {
           style: Theme.of(context).textTheme.headline3,
         ),
       ),
+      drawer: MainDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [

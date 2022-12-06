@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/screens/full_body_screen.dart';
+import '../widgets/app_drawer.dart';
 
 class WorkoutSplit extends StatelessWidget {
   const WorkoutSplit({super.key});
@@ -15,6 +16,7 @@ class WorkoutSplit extends StatelessWidget {
           style: Theme.of(context).textTheme.headline3,
         ),
       ),
+      drawer: MainDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -47,7 +49,8 @@ class WorkoutSplit extends StatelessWidget {
               child: ListTile(
                 enabled: true,
                 onTap: () {
-                  Navigator.of(context).pushNamed(FullBody.routeName);
+                  Navigator.of(context)
+                      .pushReplacementNamed(FullBody.routeName);
                 },
                 title: Text(
                   'FULL BODY WORKOUT',

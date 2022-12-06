@@ -87,7 +87,8 @@ class HomeScreen extends StatelessWidget {
                   'Your workout schedule is called your workout split, how regularly you lift and which muscles you train.Tap here for the 3 common splits for maximum results'),
               isThreeLine: true,
               onTap: () {
-                Navigator.of(context).pushNamed(WorkoutSplit.routeName);
+                Navigator.of(context)
+                    .pushReplacementNamed(WorkoutSplit.routeName);
               },
             ),
           ),
