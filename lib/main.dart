@@ -4,6 +4,7 @@ import './screens/starting_screen.dart';
 import './screens/workout_split_screen.dart';
 import './screens/home_screen.dart';
 import './screens/full_body_screen.dart';
+import './screens/PPL_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +52,9 @@ class MyApp extends StatelessWidget {
       routes: {
         WorkoutSplit.routeName: (context) => const WorkoutSplit(),
         HomeScreen.routeName: (context) => const HomeScreen(),
-        FullBody.routeName: (context) => FullBody()
+        FullBody.routeName: (context) => FullBody(),
+        PPLScreen.routeName:(context) => PPLScreen(),
+
       },
     );
   }
