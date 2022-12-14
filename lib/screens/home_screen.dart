@@ -16,113 +16,121 @@ class HomeScreen extends StatelessWidget {
         ),
         backgroundColor: const Color(0xFFFFBD73),
       ),
-      body: Column(
-        children: [
-          Container(
-            margin: const EdgeInsets.only(
-              top: 12,
-              left: 10,
-              right: 10,
-            ),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(15),
-              child: Image.asset(
-                'assets/images/gym3.jpg',
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              margin: const EdgeInsets.only(
+                top: 12,
+                left: 10,
+                right: 10,
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: Image.asset(
+                  'assets/images/gym3.jpg',
+                ),
               ),
             ),
-          ),
-          const SizedBox(
-            height: 4,
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 8,
-              right: 8,
+            const SizedBox(
+              height: 4,
             ),
-            child: RichText(
-              textAlign: TextAlign.justify,
-              text: TextSpan(
-                children: [
-                  TextSpan(
-                    text: 'WELCOME TO LONELY GYM GUIDE\n',
-                    style: Theme.of(context).textTheme.headline1,
-                  ),
-                  TextSpan(
-                    text:
-                        'Hopefully this guide help you understand different workout routines, and covers as much excercises for each muscles group. Which eventually helps to costruct your own plan.',
-                    style: Theme.of(context).textTheme.bodyText1,
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.only(
+                left: 8,
+                right: 8,
               ),
-            ),
-          ),
-          const SizedBox(
-            height: 4,
-          ),
-          Container(
-            padding: const EdgeInsets.only(top: 10),
-            height: 110,
-            margin: const EdgeInsets.only(right: 8, left: 8, top: 20),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 255, 189, 115),
-                  Color.fromARGB(255, 247, 162, 66),
-                  Color.fromARGB(255, 234, 135, 22),
-                ],
-              ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(15),
+              child: RichText(
+                textAlign: TextAlign.justify,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: 'WELCOME TO LONELY GYM GUIDE\n',
+                      style: Theme.of(context).textTheme.headline1,
+                    ),
+                    TextSpan(
+                      text:
+                          'Hopefully this guide help you understand different workout routines, and covers as much excercises for each muscles group. Which eventually helps to costruct your own plan.',
+                      style: Theme.of(context).textTheme.bodyText1,
+                    ),
+                  ],
+                ),
               ),
             ),
-            child: ListTile(
-              leading: Icon(
-                Icons.fitness_center,
-              ),
-              title: Text(
-                'WORKOUT SPLITS',
-                style: Theme.of(context).textTheme.headline2,
-              ),
-              subtitle: Text(
-                  'Your workout schedule is called your workout split, how regularly you lift and which muscles you train.Tap here for the 3 common splits for maximum results'),
-              isThreeLine: true,
-              onTap: () {
-                Navigator.of(context)
-                    .pushReplacementNamed(WorkoutSplit.routeName);
-              },
+            const SizedBox(
+              height: 4,
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.only(top: 10),
-            height: 110,
-            margin: const EdgeInsets.only(right: 8, left: 8, top: 20),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 255, 189, 115),
-                  Color.fromARGB(255, 247, 162, 66),
-                  Color.fromARGB(255, 234, 135, 22),
-                ],
+            Container(
+              padding: const EdgeInsets.only(top: 10),
+              height: 110,
+              margin: const EdgeInsets.only(right: 8, left: 8, top: 20),
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 189, 115),
+                    Color.fromARGB(255, 247, 162, 66),
+                    Color.fromARGB(255, 234, 135, 22),
+                  ],
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
               ),
-              borderRadius: BorderRadius.all(
-                Radius.circular(15),
+              child: ListTile(
+                dense: true,
+                leading: Icon(
+                  Icons.fitness_center,
+                ),
+                title: Text(
+                  'WORKOUT SPLITS',
+                  style: Theme.of(context).textTheme.headline2,
+                ),
+                subtitle: Text(
+                    'Your workout schedule is called your workout split, how regularly you lift and which muscles you train.Tap here for the 3 common splits for maximum results'),
+                isThreeLine: true,
+                onTap: () {
+                  Navigator.of(context)
+                      .pushReplacementNamed(WorkoutSplit.routeName);
+                },
               ),
             ),
-            child: ListTile(
-              leading: Icon(
-                Icons.bolt,
+            Container(
+              padding: const EdgeInsets.only(top: 10),
+              height: 110,
+              margin: const EdgeInsets.only(
+                right: 8,
+                left: 8,
+                top: 20,
+                bottom: 10,
               ),
-              title: Text(
-                'EXCERCISES',
-                style: Theme.of(context).textTheme.headline2,
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 255, 189, 115),
+                    Color.fromARGB(255, 247, 162, 66),
+                    Color.fromARGB(255, 234, 135, 22),
+                  ],
+                ),
+                borderRadius: BorderRadius.all(
+                  Radius.circular(15),
+                ),
               ),
-              subtitle: Text(
-                'Tap here for some of the classic excercises for each muscle ',
+              child: ListTile(
+                leading: Icon(
+                  Icons.bolt,
+                ),
+                title: Text(
+                  'EXCERCISES',
+                  style: Theme.of(context).textTheme.headline2,
+                ),
+                subtitle: Text(
+                  'Tap here for some of the classic excercises for each muscle ',
+                ),
+                isThreeLine: true,
               ),
-              isThreeLine: true,
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

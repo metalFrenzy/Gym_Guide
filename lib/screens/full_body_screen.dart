@@ -214,7 +214,7 @@ class FullBody extends StatelessWidget {
               ),
               child: HyperLink(
                 'https://builtwithscience.com/workouts/best-full-body-workout/',
-                'Visit this website for more information',
+                'Click here for more information',
               ),
             )
           ],
