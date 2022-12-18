@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '/screens/full_body_screen.dart';
 import '../widgets/app_drawer.dart';
 import '../screens/PPL_screen.dart';
+import '../screens/bro_screen.dart';
 
 class WorkoutSplit extends StatelessWidget {
   const WorkoutSplit({super.key});
@@ -111,7 +112,9 @@ class WorkoutSplit extends StatelessWidget {
               ),
               child: ListTile(
                 enabled: true,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushReplacementNamed(Bro.routeName);
+                },
                 title: Text(
                   'BRO-SPLIT',
                   style: Theme.of(context).textTheme.headline2,

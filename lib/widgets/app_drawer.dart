@@ -13,7 +13,7 @@ class MainDrawer extends StatelessWidget {
             backgroundColor: const Color(0xFFFFBD73),
             title: Text(
               'HELLO!',
-              style: Theme.of(context).textTheme.headline1,
+              style: Theme.of(context).textTheme.headline3,
             ),
             automaticallyImplyLeading: false,
           ),

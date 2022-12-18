@@ -67,6 +67,8 @@ flutter:
     - assets/images/minion.jpg
     - assets/images/gym3.jpg
     - assets/images/plates.jpg
+    - assets/images/jerry.jpg
+    - assets/images/tom.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
