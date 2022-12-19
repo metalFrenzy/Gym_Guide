@@ -14,7 +14,7 @@
   </intent>
    </queries>
    <application
-        android:label="gym_guide_app"
+        android:label="Lonely Gym Guide"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
