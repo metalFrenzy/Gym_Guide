@@ -33,7 +33,7 @@ class StartingScreen extends StatelessWidget {
                   text: const TextSpan(
                     children: [
                       TextSpan(
-                        text: 'GYM GUIDE\n',
+                        text: 'LONELY GYM GUIDE\n',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 26,
