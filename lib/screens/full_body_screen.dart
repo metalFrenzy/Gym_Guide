@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../services/hyperlink_service.dart';
 import '../widgets/app_drawer.dart';
+import '../widgets/image_widget.dart';
 
 class FullBody extends StatelessWidget {
   static const routeName = '/full';
@@ -19,13 +20,7 @@ class FullBody extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(top: 12, left: 10, right: 10),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset('assets/images/plates.jpg'),
-              ),
-            ),
+            ImageRender('assets/images/plates.jpg'),
             const SizedBox(
               height: 5,
             ),

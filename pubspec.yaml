@@ -38,19 +38,27 @@ dependencies:
   cupertino_icons: ^1.0.2
   url_launcher: ^6.1.7
   
-
+  
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_launcher_icons: ^0.11.0
 
+  flutter_native_splash: ^2.2.16
+
+flutter_native_splash:
+  color: '#f0e0bb'
+  image: assets/images/exercise.png
+  android: true
+  ios: true
+
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/images/icon.jpg"
+  image_path: "assets/images/exercise.png"
   adaptive_icon_background: "#191919"
-  adaptive_icon_foreground: "assets/images/icon.jpg"
+  adaptive_icon_foreground: "assets/images/exercise.png"
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -79,6 +87,7 @@ flutter:
     - assets/images/plates.jpg
     - assets/images/jerry.jpg
     - assets/images/tom.jpg
+    - assets/images/icon.jpg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

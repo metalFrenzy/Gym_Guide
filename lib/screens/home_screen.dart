@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../screens/workout_split_screen.dart';
+import '../widgets/image_widget.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -19,19 +20,7 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(
-                top: 12,
-                left: 10,
-                right: 10,
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                  'assets/images/gym3.jpg',
-                ),
-              ),
-            ),
+            ImageRender('assets/images/gym3.jpg'),
             const SizedBox(
               height: 4,
             ),
