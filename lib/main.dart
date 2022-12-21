@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
               ),
             ),
       ),
-      home: const StartingScreen(),
+      home: StartingScreen(),
       routes: {
         WorkoutSplit.routeName: (context) => const WorkoutSplit(),
         HomeScreen.routeName: (context) => const HomeScreen(),

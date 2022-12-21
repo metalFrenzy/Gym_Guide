@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/app_drawer.dart';
 import '../services/hyperlink_service.dart';
+import '../widgets/image_widget.dart';
 
 class PPLScreen extends StatelessWidget {
   static const routeName = '/ppl';
@@ -20,19 +21,7 @@ class PPLScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(
-                top: 12,
-                left: 10,
-                right: 10,
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                  'assets/images/gym.jpg',
-                ),
-              ),
-            ),
+            ImageRender('assets/images/gym.jpg'),
             const SizedBox(
               height: 5,
             ),

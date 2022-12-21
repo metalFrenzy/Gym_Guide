@@ -4,6 +4,7 @@ import '/screens/full_body_screen.dart';
 import '../widgets/app_drawer.dart';
 import '../screens/PPL_screen.dart';
 import '../screens/bro_screen.dart';
+import '../widgets/image_widget.dart';
 
 class WorkoutSplit extends StatelessWidget {
   const WorkoutSplit({super.key});
@@ -22,13 +23,7 @@ class WorkoutSplit extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(left: 8, right: 8, top: 12),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset('assets/images/minion.jpg'),
-              ),
-            ),
+            ImageRender('assets/images/minion.jpg'),
             const SizedBox(
               height: 4,
             ),

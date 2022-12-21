@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../widgets/app_drawer.dart';
 import '../services/hyperlink_service.dart';
+import '../widgets/image_widget.dart';
 
 class Bro extends StatelessWidget {
   static const routeName = '/bro';
@@ -20,13 +21,7 @@ class Bro extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              margin: const EdgeInsets.only(top: 12, left: 10, right: 10),
-              child: ClipRRect(
-                child: Image.asset('assets/images/jerry.jpg'),
-                borderRadius: BorderRadius.circular(15),
-              ),
-            ),
+            ImageRender('assets/images/jerry.jpg'),
             const SizedBox(
               height: 5,
             ),
