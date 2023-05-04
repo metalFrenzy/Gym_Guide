@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../screens/workout_split_screen.dart';
 import '../widgets/image_widget.dart';
+import '../screens/muscle_group_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -116,6 +117,10 @@ class HomeScreen extends StatelessWidget {
                   'Tap here for some of the classic excercises for each muscle ',
                 ),
                 isThreeLine: true,
+                onTap: () {
+                  Navigator.of(context)
+                      .pushReplacementNamed(MuscleScreen.routeName);
+                },
               ),
             ),
           ],
