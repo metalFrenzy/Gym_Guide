@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gym_guide_app/screens/muscle_group_screen.dart';
 
 import '../screens/home_screen.dart';
 import '../screens/workout_split_screen.dart';
@@ -42,6 +43,19 @@ class MainDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pushReplacementNamed(
                 WorkoutSplit.routeName,
+              );
+            },
+          ),
+          Divider(),
+          ListTile(
+            leading: Icon(Icons.bolt),
+            title: Text(
+              "Exercises",
+              style: Theme.of(context).textTheme.bodyText1,
+            ),
+            onTap: () {
+              Navigator.of(context).pushReplacementNamed(
+                MuscleScreen.routeName,
               );
             },
           ),
